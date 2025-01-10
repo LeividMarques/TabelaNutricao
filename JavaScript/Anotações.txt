@@ -1,0 +1,115 @@
+° <script>: Tudo que declaramos dentro da tag <script> é interpretado como Javascript quando o navegador passar por ali.
+
+No caso abaixo:
+
+<script>
+alert("Olá mundo");
+</script>
+
+Quando o navegador passar pela tag abaixo ele vai interprar o texto "alert("Olá mundo");" e irá executar a função alert(), que é responsável por exibir uma pop up com a mensagem Olá mundo.
+
+--------------------------
+
+° document: 
+
+seria uma tag JavaScript que mostra todo o HTML no console da página, para facilitar a alteração de informações. 
+
+--------------------------
+
+° document.querySelector: 
+
+Quando desejamos pegar apenas parte do HTML, devemos utilizar a função querySelector(). A função querySelector faz a busca através de seletores CSS para trazer o HTML que você está interessado. Por exemplo, no caso abaixo:
+
+<h1 class="titulo"> Meu primeiro site</h1>
+
+Podemos buscar este <h1> passando o seletor CSS correto para a função querySelector. Utilizando o seletor de tag, podemos buscar assim:
+
+document.querySelector("h1");
+
+E utilizando um seletor CSS de classe, ficaria assim:
+
+document.querySelector(".titulo");
+
+Neste caso, ambas as funções retornariam o h1. Ter domínio dos seletores CSS é importante se você deseja trabalhar bem com o Javascript!
+
+--------------------------
+
+° document.querySelectorAll: Serve para selecionar e mostrar varias informações de uma classe. o querySelector somente mostra a primeira linha da classe, enquanto a querySelectorAll mostra todos os dados que contem a classe informada.
+
+--------------------------
+° textContent: 
+
+Utilizado para alterar a descrição de informações na página. Utilizado junto de uma variavel para alterar a informação desejada.
+
+Exemplo: 
+
+var titulo = document.querySelector("h1");
+titulo.textContent = "Aparecida Alimentos";
+
+-------------------------
+
+° classList: Para selecionar a classe de outro arquivo, utilizado para selecionar uma classe no CSS.
+
+-------------------------
+
+° toFixed: Podemos controlar o número de casas decimais exibidas através da função .toFixed().
+
+-----------------------------
+
+° createElement: Para criar uma nova coluna no Html através do JavaScript é utilizado a função createElement. EXEMPLO:
+
+var pacienteTr = document.createElement("tr")
+
+------------------------------
+
+° appendChild: utiliza essa função quando quer informar uma variavel como filho.
+
+-------------------------------
+
+° Funções: O Javascript possuí dois tipos de funções, as funções anônimas e as funções nomeadas.
+
+As funções nomeadas, como o próprio nome diz, são as funções que levam um nome em sua criação e que podem ser invocadas posteriormente, como a função mostraMensagem:
+
+function mostraMensagem(){
+    console.log("Fui clicado");
+}
+
+Já as funções anônimas, são funções que não tem nome e só são chamadas no contexto aonde foram declaradas. Elas são muito usadas em conjunto com a função addEventListener(), onde normalmente a ação que desejamos chamar só deve ser chamada naquele local.
+
+titulo.addEventListener("click", function(){
+    console.log("Fui clicado");
+});
+
+----------------------------------
+
+° Objeto: Utilizamos objetos no Javascript como na maioria das linguagens de programação orientadas , aonde os objetos podemos compará-los com objetos da vida real. Um objeto é uma entidade independente, com propriedades e tipos. Compare-o com uma xícara, por exemplo. Uma xícara é um objeto, com propriedades. Uma xícara tem uma cor, uma forma, peso, um material de composição, etc. Da mesma forma, objetos em JavaScript podem ter propriedades, que definem suas características.
+
+Para declaramos um objeto, utilizamos a sintaxe com {}, exemplo:
+
+var xicara = {};
+
+Só que de nada nos serve um objeto vazio, então podemos dar características a este objeto através de suas propriedades:
+
+var xicara = {
+    cor: "azul",
+    peso: 125,
+    tipo: "chá"
+};
+
+As propriedades de um objeto são separadas por um : do seu valor e utilizamos uma vírgula ao final de cada propriedade para separá-la da próxima. Podemos acessar as propriedades de um objeto Javascript como abaixo:
+
+xicara.cor // azul
+xicara.peso // 125
+xicara.tipo // chá
+xicara.modelo // undefined, este objeto não possui a propriedade modelo
+
+Ou seja, nosso exemplo estava errado por que estava utilizando o sinal de = em vez do de : para separar as propriedades de seus valores.
+
+---------------------
+
+° remove: Remove o item da página após um evento;
+
+---------------------
+
+Inserindo filtros:
+
